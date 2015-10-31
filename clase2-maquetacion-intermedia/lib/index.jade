@@ -4,38 +4,44 @@ html(lang="en")
 		meta(charset="UTF-8")
 		title Edgar Zavala
 		link(rel="stylesheet" href="css/estilos.css")
+		link(rel="stylesheet" href="css/fonts.css")
 	body
 		section.Perfil
 			header.Peril-header
 				figure.Perfil-header-figure
 					img
-					figcaption Edgar Zavala
-					figcaption Front-end
+					div.Perfil-header-figure-figcaptions
+						figcaption Edgar Zavala
+						figcaption Front-end
 			article.Perfil-contacto
 				ul
-					a
-						li.Perfil-contacto-tel 
-							i
+					li.Perfil-contacto-tel 
+						a(href="tel:+528448076459")
+							i.icon-tel
 							span (844) 807 6459
-					a
-						li.Perfil-contacto-email
-							i
+					li.Perfil-contacto-email
+						a(href="mailto:ezavile@gmail.com")
+							i.icon-email
 							span ezavile@gmail.com
-					a
-						li.Perfil-contacto-contratar
-							i
+					li.Perfil-contacto-contratar
+						a(href="#")
+							i.icon-contratar
 							span Contratar
 			article.Perfil-redesSociales
 				ul
-					a
-						li.Perfil-redesSociales-twt
-							i
-					a
-						li.Perfil-redesSociales-fb
-							i
-					a
-						li.Perfil-redesSociales-git
-							i
+					li.Perfil-redesSociales-twt
+						a(href="#" target="_blank")
+							i.icon-twt
+							span @ezavile
+					li.Perfil-redesSociales-fb
+						a(href="http://www.facebook.com/EdgarZavalita" target="_blank")
+							i.icon-fb
+							span EdgarZavalita
+					li.Perfil-redesSociales-git
+						a(href="http://www.github.com/ezavile" target="_blank")
+							i.icon-git
+							span ezavile
+			//article#map.Perfil-mapa
 		section.Contenido
 			article.Contenido-skill
 				div.Contenido-skill-info
@@ -45,3 +51,5 @@ html(lang="en")
 				div.Contenido-skill-info
 					h2.Contenido-skill-info-title Desarrollo web
 					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+		script(src="https://maps.googleapis.com/maps/api/js")
+		script(src="./js/app.js")
