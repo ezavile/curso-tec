@@ -6,6 +6,15 @@ html(lang="en")
 		link(rel="stylesheet" href="css/estilos.css")
 		link(rel="stylesheet" href="css/fonts.css")
 	body
+		section#popup.Popup
+			article.Popup-container
+				i#closePopup.icon-cancel
+				form.Popup-container-form
+					input(type="email" placeholder="example@dominio.com" required)
+					input(type="text" placeholder="Tu nombre aquí" required)
+					textarea(placeholder="Escriba su mensaje" required)
+					button(type="submit") Enviar
+				div#map.Popup-container-map
 		section.Perfil
 			header.Peril-header
 				figure.Perfil-header-figure
@@ -23,7 +32,7 @@ html(lang="en")
 						a(href="mailto:ezavile@gmail.com")
 							i.icon-email
 							span ezavile@gmail.com
-					li.Perfil-contacto-contratar
+					li#btnPopup.Perfil-contacto-contratar
 						a(href="#")
 							i.icon-contratar
 							span Contratar
@@ -45,23 +54,38 @@ html(lang="en")
 		section.Contenido
 			article.Contenido-skill
 				div.Contenido-skill-info
-					h2.Contenido-skill-info-title Desarrollo web
-					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
 			article.Contenido-skill
 				div.Contenido-skill-info
-					h2.Contenido-skill-info-title Desarrollo web
-					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
 			article.Contenido-skill
 				div.Contenido-skill-info
-					h2.Contenido-skill-info-title Desarrollo web
-					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
 			article.Contenido-skill
 				div.Contenido-skill-info
-					h2.Contenido-skill-info-title Desarrollo web
-					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
 			article.Contenido-skill
 				div.Contenido-skill-info
-					h2.Contenido-skill-info-title Desarrollo web
-					p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asdasdsd asdasdasd asdasdasd asdsssss
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
+			article.Contenido-skill
+				div.Contenido-skill-info
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
+			article.Contenido-skill
+				div.Contenido-skill-info
+					div
+						h2.Contenido-skill-info-title Desarrollo web
+						p.Contenido-skill-info-desc asdoasdnasd asjasodjaos asdsds nasdassd asda
 		script(src="https://maps.googleapis.com/maps/api/js")
 		script(src="./js/app.js")
