@@ -61,3 +61,61 @@ ul
 		background red;
 		width 100%
 		height 8em
+		
+@media(max-width:800px)
+	.Perfil
+		width 100%
+		flex-direction row
+		&-header-figure
+			display flex
+			position relative
+			&-figcaptions
+				position absolute
+				left 0
+				top 0
+				bottom 0
+				display flex
+				flex-direction column
+				justify-content space-between
+				width 8em
+				figcaption
+					margin-top 0
+					background transparent !important
+			img
+				margin-right 1em
+		&-redesSociales
+			position fixed
+			bottom 0
+			top 0
+			left 0
+			ul
+				height 100%
+				display flex
+				flex-direction column
+				justify-content center
+				li
+					width 4em
+					a
+						display: flex;
+						align-items: center;
+						padding: .5em;
+						i
+							margin 1em
+						span
+							display none
+					&:hover
+						width 10em
+						a
+							span
+								display inherit
+		&-contacto
+			width 100%
+			margin-right 2em
+@media(max-width 420px)
+	.Perfil
+		&-contacto
+			li
+				i
+					margin 0
+				span
+					display none

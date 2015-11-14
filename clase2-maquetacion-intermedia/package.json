@@ -1,0 +1,15 @@
+{
+  "name": "dwr-gd",
+  "version": "1.0.0",
+  "description": "Página web responsiva bajo la técnica Graceful Degration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server ./public"
+  },
+  "author": "Edgar Zavala",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.8.5"
+  }
+}
