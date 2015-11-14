@@ -1,0 +1,12 @@
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
+console.log("Hola Edgar");
