@@ -30,7 +30,11 @@ var config = {
 	styles: {
 		main: './src/styles/app.styl',
 		output: './build/css',
-		watch: './src/styles/*.styl'
+		watch: './src/styles/*.styl',
+		fonts:{
+			main: './src/styles/fonts/*',
+			output: './build/css/fonts/'
+		}
 	},
 	htmls: {
 		main: './src/index.jade',
@@ -38,9 +42,13 @@ var config = {
 		watch: './src/*.jade'
 	},
 	scripts:{
-		main: './src/scripts/app.js',
+		main: './src/scripts/*.js',
 		output: './build/js',
 		watch: './src/scripts/*.js'
+	},
+	api:{
+		main: './api/*',
+		output: './build/api'
 	}
 }
 
@@ -52,6 +60,16 @@ gulp.task('server', function(){
 			port: 8080
 		}));
 })
+
+/*
+gulp.task('api', function(){
+	gulp
+		.src('./api')
+		.pipe(webserver({
+			host: '0.0.0.0',
+			port: 3000
+		}));
+})*/
 
 gulp.task('clean', function(){
 	return gulp
@@ -86,7 +104,7 @@ gulp.task('build:css', function(){
 gulp.task('build:js', function(){
 	gulp
 		.src(config.scripts.main)
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest(config.scripts.output))
 		.pipe(livereload());
 });
@@ -99,8 +117,24 @@ gulp.task('watch', function(){
 	gulp.watch(config.htmls.watch, ['build:html']);
 })
 
+
+//Copiar carpeta FONTS
+gulp.task('build:fonts', function(){
+	gulp
+		.src(config.styles.fonts.main)
+		.pipe(gulp.dest(config.styles.fonts.output));
+});
+
+//Copiar carpeta API
+gulp.task('api', function(){
+	gulp
+		.src(config.api.main)
+		.pipe(gulp.dest(config.api.output));
+});
+
+
 //Tarea por default
 gulp.task('default',['clean','server','watch'], function(){
 	gulp
-		.start('build:css','build:js','build:html');
+		.start('build:fonts','build:css','build:js','build:html','api');
 })

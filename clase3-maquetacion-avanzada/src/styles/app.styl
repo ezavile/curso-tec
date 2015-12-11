@@ -1,3 +1,40 @@
 @import 'nib'
+@import './lib/normalize'
+@import './reset'
+@import './fonts.css'
+
+*
+	box-sizing border-box
+
+html,body
+	font-family Roboto
+	font-size 16px
 body
-	background green
+	background #F6F6F6
+
+.Header
+	position fixed
+	width 100%
+	background #E60B1C
+	color white
+	display flex
+	padding 1em
+	justify-content space-between
+	align-items center
+	&-menu
+		font-size 1.5em
+.Pokemons
+	padding-top 4.3em
+	.Pokemon
+		display flex
+		background #FFFFFF
+		&:nth-child(odd)
+			background #E1E1E1
+		&-img
+			width 8em
+			background red
+		&-info
+			padding 1em
+			&-nombre
+				border-bottom 1px solid #F5AE01
+				margin-bottom .5em
